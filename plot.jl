@@ -14,9 +14,12 @@ cz = SphericalHarmonicExpansions.SphericalHarmonicCoefficients(L, 0.045, true)
 
 for l in 0:L
   for m in -l:l
-    cx[l, m] = zlm(l, m, x, y, z)
-    cy[l, m] = zlm(l, m, x, y, z)
-    cz[l, m] = zlm(l, m, x, y, z)
+    coeff = SphericalHarmonicExpansions.zlm(l, m, x, y, z)
+    println("l = $l, m = $m")
+    println("coeff = $coeff")
+    cx[l, m] = coeff
+    cy[l, m] = coeff
+    cz[l, m] = coeff
   end
 end
 
@@ -33,4 +36,4 @@ fy(ix, iy, iz) = By(x => ix, y => iy, z => iz)
 fz(ix, iy, iz) = Bz(x => ix, y => iy, z => iz)
 
 fignumber = plotMagneticField([fx, fy, fz], 0.045, center=[0.0, 0.0, 0.0])
-savefig("magneticFieldInitial.png")
+savefig("magneticField.png")
