@@ -1,0 +1,1 @@
+julia -t 4 -e "include(\"plot.jl\")"
