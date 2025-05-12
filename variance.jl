@@ -7,7 +7,7 @@ using MonteCarloMeasurements
 L = 6
 R = 0.045
 center = [0.0, 0.0, 0.0]
-N = 1000
+N = 86
 
 cx = cy = cz = SphericalHarmonicExpansions.SphericalHarmonicCoefficients(L, R, true)
 
