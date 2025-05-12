@@ -1,1 +1,1 @@
-julia -t 4 -e "include(\"plot.jl\")"
+julia -t 4 -e "include(\"viewer.jl\")"
