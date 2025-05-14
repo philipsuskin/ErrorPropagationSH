@@ -1,6 +1,7 @@
 using TypedPolynomials
 using SphericalHarmonicExpansions
-include("plotMagneticField.jl")
+
+using MPISphericalHarmonics, MPIUI
 
 TypedPolynomials.@polyvar x y z
 
@@ -20,6 +21,5 @@ for l in 0:L
   end
 end
 
-using MPISphericalHarmonics, MPIUI
 coeffs = MagneticFieldCoefficients([cx; cy; cz;;], 0.045)
 MagneticFieldViewer(coeffs)
