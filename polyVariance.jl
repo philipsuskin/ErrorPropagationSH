@@ -25,4 +25,4 @@ cov_yz = 0.0
 # Covariance contribution
 σ² += 2 * (δZₗᵐ[1]*δZₗᵐ[2]*cov_xy + δZₗᵐ[1]*δZₗᵐ[3]*cov_xz + δZₗᵐ[2]*δZₗᵐ[3]*cov_yz)
 
-println("Variance: $σ²")
+println("σ²: $σ²")
